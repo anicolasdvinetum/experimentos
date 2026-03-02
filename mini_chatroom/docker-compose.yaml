@@ -1,0 +1,25 @@
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "9000:9000"
+    command: ["./server", "--addr", "0.0.0.0:9000"]
+
+  client1:
+    build:
+      context: ./client
+    depends_on:
+      - server
+    command: ["./client", "--addr", "server:9000", "--name", "Nicolas"]
+    stdin_open: true
+    tty: true
+
+  client2:
+    build:
+      context: ./client
+    depends_on:
+      - server
+    command: ["./client", "--addr", "server:9000", "--name", "Salocin"]
+    stdin_open: true
+    tty: true
