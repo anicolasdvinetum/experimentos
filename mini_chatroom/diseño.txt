@@ -1,0 +1,8 @@
+a ver, aquí voy a ponerme a aclararme las ideas
+El cliente tiene un nombre propio. Pero de momento no se lo manda al server
+Si queremos ver los nombres de otros clientes, habrá que comunicarle nuestro nombre al server
+Podemos hacerlo añadiendo nuestro nombre al principio de cada mensaje. Todos los mensajes que lleguen tendrán
+el nombre lo primero. No hace falta ni que lo parseemos (aunque estaría bien, sobre todo para usarlo de id)
+si lo usamos de id, el nombre tiene que ser único. Hay que rechazar los repetidos de algún modo
+También podemos mandarle al server un mensaje desde el main de client.go con nuestro nombre la primera vez
+Bastante más elegante, y ya te llega directo para ser parseado y transformado en id mucho más fácil
