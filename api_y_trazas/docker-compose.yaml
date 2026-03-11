@@ -26,10 +26,10 @@ services:
     command: ["./server"]
 
   k6:
-    image: grafana/k6:latest
+    image: grafana/k6
     volumes:
-      - ./k6:/scripts
+      - ./script_k6:/scripts
     depends_on:
       server:
         condition: service_started
-    command: ["k6", "run", "/scripts/script.js"]
+    command: ["run", "/scripts/script.js"]
