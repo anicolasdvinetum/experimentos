@@ -4,7 +4,17 @@ Vamos a intentar montar un servicio que llame a una api, haciendo un GET.
 Debe usar k6 para hacer una prueba de carga y jaeger para visualizar las trazas
 Todo ello en contenedores docker. 
 
-## Alto nivel
+Puertos relevantes: 
+- 8080 aplicación web. Solo tiene dos rutas, /hello y /health
+- 16686 jaeger, para visualizar trazas
+
+En principio, te posicionas en la carpeta api_y_trazas, haces 
+'''
+docker compose up
+''' 
+y deberían levantarse los tres contenedores sin problemas
+
+## Reflexiones pre y durante el desarrollo
 
 Supongo que habrá 3 contenedores, uno con k6, uno con jaeger y uno con el servicio que reciba las peticiones de k6
 
