@@ -97,8 +97,4 @@ func main() {
 
 	}
 
-	if err := reader.Close(); err != nil {
-		fmt.Println("error al cerrar reader: ", err)
-	}
-
 }
